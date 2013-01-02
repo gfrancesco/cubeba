@@ -1,0 +1,89 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    %link{:href => "css/jScrollbar.jquery.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jScrollbar.jquery.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jquery-mousewheel.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+
+  %body
+    #main_content
+
+      #top_menu
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #central_content
+        #cubeba.black
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %span#dance_box.cubeba_box_fixed
+
+        #central_top_inner.black.dance
+          #central_top_left_column
+            #header
+            .jScrollbar_left
+              .jScrollbar_mask
+                %p Cubeba on the night dove passare del tempo, dall’aperitivo al dopocena, senza doversi necessariamente spostare.
+                %p Aperitivo in chiave mediterranea con piatti caldi e freddi, stuzzichini e selezione di salumi e formaggi. La domenica diventa Royal.
+                %p Il costo della consumazione e’ di 7 Euro fino alle 22:30, orario in cui termina l’aperitivo,e parte la serata con disco bar, musica ricercata, live band e dj-set.
+
+              .jScrollbar_draggable
+                %a.draggable{:href => "#"}
+              .clr
+          
+          #central_top_right_column
+
+        #central_bottom_inner
+        
+      #addr
+        
+      %script{:type => "text/javascript",
+            :src => "js/scroll_left.js"}

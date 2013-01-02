@@ -1,0 +1,92 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+  %body
+    #main_content.news_width
+
+      #top_menu.float_right
+        #top_menu_inner
+          %p home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #news_list_box
+        %h4.list_box_title Orari
+
+        %p
+          Da lunedì a giovedì: chiuso
+        %p.list_highlight
+          Venerdì: serata beautiful people
+        %p.list_highlight
+          Sabato: serata dance cubeba
+        %p.list_highlight
+          Domenica: aperitivo Campari dalle 18:30
+        %p
+          ore 19.30 apertura ristorante, pizzeria e steak house
+        %p
+          Durante il mese di dicembre siamo aperti anche gli altri giorni su prenotazione.
+          Per info 02 90988187 - info@cubeba.it
+
+      #central_content.no_left_margin
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #home_info
+            
+          #home_news
+            %h3
+              Ultime news...
+            %a{:href => '/news'}
+              - last_file = Dir.glob(File.join("public", "news", "20*")).sort_by { |f| File.basename f }.reverse!.first
+              - if File.exist?(File.join(last_file,"flyer.jpg")) && File.exist?(File.join(last_file,"text.html"))
+                - f = File.open(File.join(last_file,"text.html"), "r")
+                =f.first.gsub(%r{</?[^>]+?>}, '').strip
+
+        #central_bottom_inner
+        
+      #addr
+        

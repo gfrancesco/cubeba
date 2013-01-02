@@ -1,0 +1,101 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    %link{:href => "css/colorbox.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    %link{:href => "css/jScrollbar.jquery.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jquery.colorbox-min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/colorbox_call.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jScrollbar.jquery.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jquery-mousewheel.js"}
+    %script{:type => "text/javascript",
+            :src => "js/change_album.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+  %body
+    #main_content
+
+      #top_menu
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #central_content
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #gallery_left_column.border
+            - d_list = Dir.glob(File.join("public","galleria","201*")).sort_by {|f| File.basename f}.reverse!
+            - d_list.each do |dir|
+              - if File.exist?(File.join(dir,"_ajax.html"))
+                - name = File.basename(dir)[9..-1].tr('_',' ')
+                - year = File.basename(dir)[0..3]
+                - month = File.basename(dir)[4..5]
+                - day = File.basename(dir)[6..7]
+                ="<p id='" + File.basename(dir) + "' class='link'>" + name + "<br>" + day + "-" + month + "-" + year + "</p>"
+
+          .jScrollbar_gallery
+            .jScrollbar_mask
+              
+
+            .jScrollbar_draggable
+              %a.draggable{:href => "#"}
+            .clr 
+
+        #central_bottom_inner
+        
+      #addr
+
+      %script{:type => "text/javascript",
+            :src => "js/scroll_gallery.js"}
+        

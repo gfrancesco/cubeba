@@ -1,0 +1,9 @@
+.rvmrc*
+db/*.sqlite3
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+public/galleria
+public/img
+public/news
+public/tiny_mce

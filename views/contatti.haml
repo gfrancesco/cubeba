@@ -1,0 +1,94 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+  %body
+    #main_content
+
+      #top_menu
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #central_content
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #central_top_left_column.contact.border
+            %h4 Villa Castelbarco
+            %p Via Per Concesa
+            %p Vaprio D'Adda - MI
+            %p tel. 02 90988187
+            %p fax. 02 92011146
+            %p info@cubeba.it
+            %br
+            %p Paolo  335 7014062
+            %p Sergio 335 1937924
+            %br
+            %p Aperto dal venerdì alla domenica
+            %p dalle ore 18:00 alle ore 02:00
+
+          
+          #central_top_right_column.contact
+            %h3 Come raggiungerci
+            %br
+            %h4 da Milano
+            %p Via Palmanova - SS 11 fino a Villa Fornaci,
+            %p poi SS 25 per Vaprio D'Adda,
+            %p oppure autostrada A4 direzione Venezia,
+            %p uscita casello di Trezzo D'Adda (MI),
+            %p seguire indicazioni per Vaprio D'Adda.
+            %br
+            %h4 da Bergamo
+            %p autostrada A4 direzione Milano,
+            %p uscita casello di Trezzo D'Adda (MI),
+            %p seguire indicazioni per Vaprio D'Adda.
+
+        #central_bottom_inner
+        
+      #addr
+        

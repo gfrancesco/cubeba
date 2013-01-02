@@ -1,0 +1,94 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+  %body
+    #main_content
+
+      #top_menu
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #central_content
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #newsletter_inner_box
+            %p
+              =@privacy
+            %h4 Lascia i tuoi dati, ti terremo aggiornato su tutte le novità!
+
+            %form{ :method => 'post' }
+              .form_line
+                %label Nome 
+                %input{:type => 'text', :name => 'firstname'}
+              .form_line
+                %label Cognome 
+                %input{:type => 'text', :name => 'surname'}
+              .form_line
+                %label Età 
+                %input{:type => 'text', :name => 'age'}
+              .form_line
+                %label Paese 
+                %input{:type => 'text', :name => 'town'}
+              .form_line
+                %label Email 
+                %input{:type => 'text', :name => 'email'}
+              .form_line
+                %label
+                  Consenso
+                  %a{:href => "/privacy", :target => '_blank'}
+                    privacy
+                %input{:type => 'checkbox', :name => 'privacy'}
+              %input{:type => 'submit', :value => 'Invia' }
+
+
+        #central_bottom_inner
+        
+      #addr
+        

@@ -1,0 +1,73 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    %script{:type => "text/javascript",
+            :src => "js/curvycorners.js"}
+    %script{:type => "text/javascript",
+            :src => "js/analytics.js"}
+
+  %body
+    #main_content
+
+      #top_menu
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p
+            %a{:href => "/news"}
+              news
+          %p chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #central_content
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #central_top_left_column.who.border
+            #header
+            %p#first Da noi è possibile festeggiare il tuo compleanno, il tuo party di laurea, cene o aperitivi privati per cerimonie o incontri aziendali. Per richiedere un preventivo contattaci tramite i recapiti presenti in area contatti.
+          
+          #central_top_right_column
+            %p Una cornice d'eccellenza ospita il Cubeba, che nasce appunto all'interno della milanese villa Castelbarco.
+            %p Una location tutta vetri nata dal restyling delle antiche serre: nelle due sale del locale si diffonde la magia del panorama naturale di rara bellezza che circonda la villa.
+            %p Il cocktail&amp;wine bar è caratterizzato da comodi e accoglienti salottini interni e da un ampio dehors: qui potrete accomodarvi per il vostro ricco aperitivo a buffet che si trasforma, col passare delle ore, in raffinato disco bar con musica ricercata, live band e dj-set.
+
+        #central_bottom_inner
+        
+      #addr
+        

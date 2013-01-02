@@ -1,0 +1,125 @@
+.clr {
+	clear:both;
+	height:0
+}
+
+.jScrollbar_news {
+	height:230px;
+	overflow:hidden;
+	position:relative;
+        width:310px;
+}
+.jScrollbar_news .jScrollbar_mask {
+        width:298px;
+	position:absolute;
+	top:0;
+	float:left;
+}
+.jScrollbar_news .jScrollbar_mask p {
+			/*margin:0;
+			padding:0;
+			color:#FFF;
+			font-size:12px;*/
+}
+.jScrollbar_news .jScrollbar_draggable {
+	float:left;
+	width:13px;
+	height:230px;
+	overflow:hidden;
+	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	margin-left:9px;
+	position:absolute;
+	right:10px;
+}
+.jScrollbar_news .jScrollbar_draggable a.draggable {
+	position:relative;
+	background:transparent url('img/bg_draggable4.png') no-repeat;
+	display:block;
+	height:13px;
+	width:13px;
+	margin-left:0;
+	cursor:pointer;
+}
+
+
+
+
+.jScrollbar_left {
+	height:120px;
+	overflow:hidden;
+	position:relative;
+        width:240px;
+	margin-top:90px;
+}
+.jScrollbar_left .jScrollbar_mask {
+        width:206px;
+	position:absolute;
+	top:0;
+	float:left;
+}
+.jScrollbar_left .jScrollbar_draggable {
+	float:left;
+	width:13px;
+	height:120px;
+	overflow:hidden;
+	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	margin-left:9px;
+	position:absolute;
+	right:10px;
+}
+.jScrollbar_left .jScrollbar_draggable a.draggable {
+	position:relative;
+	background:transparent url('img/bg_draggable4.png') no-repeat;
+	display:block;
+	height:13px;
+	width:13px;
+	margin-left:0;
+	cursor:pointer;
+}
+
+
+
+
+.jScrollbar_gallery {
+	height:228px;
+	overflow:hidden;
+	position:relative;
+        width:448px;
+        padding-left:7px;
+        padding-right:7px;
+        margin-top:14px;
+        float:left;
+        z-index:20;
+}
+
+.jScrollbar_gallery .jScrollbar_mask {
+        width:432px;
+	position:absolute;
+	top:0;
+	float:left;
+}
+.jScrollbar_gallery .jScrollbar_mask p {
+			/*margin:0;
+			padding:0;
+			color:#FFF;
+			font-size:12px;*/
+}
+.jScrollbar_gallery .jScrollbar_draggable {
+	float:left;
+	width:13px;
+	height:228px;
+	overflow:hidden;
+	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	margin-left:9px;
+	position:absolute;
+	right:10px;
+}
+.jScrollbar_gallery .jScrollbar_draggable a.draggable {
+	position:relative;
+	background:transparent url('img/bg_draggable4.png') no-repeat;
+	display:block;
+	height:13px;
+	width:13px;
+	margin-left:0;
+	cursor:pointer;
+}

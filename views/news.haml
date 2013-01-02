@@ -1,0 +1,169 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+
+  %head
+    %meta{'http-equiv' => "Content-type", :content => "text/html;charset=UTF-8"}
+    %title Cubeba
+    %link{:href => "css/style.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    -#%link{:href => "http://fonts.googleapis.com/css?family=Jura:600&v2",
+    -#:rel => "stylesheet",
+    -#:type => "text/css"}
+    %link{:href => "css/colorbox.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    %link{:href => "css/jScrollbar.jquery.css",
+          :rel => "stylesheet",
+          :type => "text/css"}
+    /[if lte IE 8]
+      %link{:href => "css/ie.css",
+            :rel => "stylesheet",
+            :type => "text/css"}
+
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"}
+    -#%script{:type => "text/javascript",
+    -#:src => "js/curvycorners.js"}
+    -#%script{:type => "text/javascript",
+    -#:src => "js/slide_news.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jScrollbar.jquery.js"}
+    %script{:type => "text/javascript",
+            :src => "js/jquery-mousewheel.js"}
+    %script{:type => "text/javascript",
+              :src => "js/news_box.js"}
+    -#%script{:type => "text/javascript",
+    -#:src => "js/jquery.colorbox-min.js"}
+    -#%script{:type => "text/javascript",
+    -#:src => "js/colorbox_call.js"}
+    -#%script{:type => "text/javascript",
+    -#:src => "js/analytics.js"}
+    
+  %body
+    #main_content.news_width
+
+      #top_menu.float_right
+        #top_menu_inner
+          %p
+            %a{:href => "/"}
+              home
+          %p 
+            %a{:href => "/galleria"}
+              galleria
+          %p news
+          %p
+            %a{:href => "/chi_siamo"}
+              chi siamo
+          %p
+            %a{:href => "/newsletter"}
+              newsletter
+          %p#top_menu_last
+            %a{:href => "/contatti"}
+              contatti
+
+        %a{:href => "https://www.facebook.com/pages/Cubeba/226474904029224",
+           :target => "_blank"}
+          %img#fb{:src => "img/fb.png",
+                  :alt => "Facebook_logo"}
+
+      #news_list_box
+        %h4.list_box_title News
+
+        - i = 0
+        - file_ok = Array.new
+        - all_files = Dir.glob(File.join("public", "news", "20*"))
+        - Dir.glob(all_files) { |f| file_ok << f if f[-8..-1] > (Date.today-10).to_s.gsub('-', '') }
+        - d_list = file_ok.sort_by { |f| File.basename f }.reverse!
+
+        %ul
+        - d_list.each do |dir|
+          - if File.exist?(File.join(dir,"flyer.jpg")) && File.exist?(File.join(dir,"text.html"))
+            - name = File.basename(dir)
+            - f = File.open(File.join(dir,"text.html"), "r")
+            %li{:id => name}
+              =f.first.gsub(%r{</?[^>]+?>}, '').strip
+
+      #central_content.no_left_margin
+        #cubeba.brown
+          %a{:href => "/food"}
+            %span#food_box.cubeba_box_hover
+          %a{:href => "/drink"}
+            %span#drink_box.cubeba_box_hover
+          %a{:href => "/dance"}
+            %span#dance_box.cubeba_box_hover
+
+        #central_top_inner.brown
+          #central_top_left_column.food
+
+            - d_list.each do |dir|
+              - if File.exist?(File.join(dir,"flyer.jpg")) && File.exist?(File.join(dir,"text.html"))
+                - name = File.basename(dir)
+                - if i == 0
+                  ="<a href='news/" + name + "/flyer.jpg' rel='thumb'>"
+                  ="<img class='news_img' id='#{name}_i' alt='flyer_news' src='news/" + name + "/flyer.jpg'>"
+                  ="</a>"
+                - else
+                  ="<a href='news/" + name + "/flyer.jpg' rel='thumb'>"
+                  ="<img class='news_img inactive' id='#{name}_i' alt='flyer_news' src='news/" + name + "/flyer.jpg'>"
+                  ="</a>"
+                - i += 1
+            
+            - if i > 0
+              ="<a href='news/campari/flyer.jpg' rel='thumb'>"
+              ="<img class='news_img inactive' alt='flyer_news' src='news/campari/flyer.jpg'>"
+              ="</a>"
+            - else
+              ="<a href='news/campari/flyer.jpg' rel='thumb'>"
+              ="<img class='news_img' alt='flyer_news' src='news/campari/flyer.jpg'>"
+              ="</a>"
+
+            %span#arrow_left.news_arrow
+            %span#arrow_right.news_arrow
+          
+          #central_top_right_column
+
+            -#.red_ribbon
+            .jScrollbar_news
+
+              - i = 0
+              - d_list.each do |dir|
+                - if File.exist?(File.join(dir,"flyer.jpg")) && File.exist?(File.join(dir,"text.html"))
+                  - name = File.basename(dir)
+                  - f = File.open(File.join(dir,"text.html"), "r")
+                  - if i == 0
+                    ="<div class='jScrollbar_mask' id='#{name}_t'>"
+                    - f.each_line do |line|
+                      =line
+                    ="</div>"
+                  - else
+                    ="<div class='jScrollbar_mask inactive' id='#{name}_t'>"
+                    - f.each_line do |line|
+                      =line
+                    ="</div>"
+                  - i += 1
+              
+              - if i > 0
+                ="<div class='jScrollbar_mask inactive'>"
+              - else
+                ="<div class='jScrollbar_mask'>"
+
+              - f = File.open("public/news/campari/text.html", "r")
+              - f.each_line do |line|
+                =line
+              ="</div>"
+
+              .jScrollbar_draggable
+                %a.draggable{:href => "#"}
+              .clr  
+
+
+        #central_bottom_inner
+        
+      #addr
+
+      %script{:type => "text/javascript",
+            :src => "js/scroll_news.js"}
+        
