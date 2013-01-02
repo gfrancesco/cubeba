@@ -1,5 +1,5 @@
 set :application, "cubeba"
-set :repository,  "https://github.com/gfrancesco/cubeba.git"
+set :repository,  "git@github.com:gfrancesco/cubeba.git"
 set :use_sudo, false
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -18,14 +18,11 @@ set :default_environment, {
 }
 
 namespace :deploy do
-  # desc "Symlink static dir."
-  # task :symlink_static do
-  #   run "ln -nfs #{shared_path}/assets/img #{release_path}/public/img"
-  # end
   desc "Create shared directories."
   task :create_shared_dir do
     run "mkdir -p #{shared_path}/assets/img #{shared_path}/assets/galleria
-      #{shared_path}/assets/news #{shared_path}/assets/tiny_mce"
+      #{shared_path}/assets/news #{shared_path}/assets/tiny_mce 
+      #{shared_path}/sockets"
   end
 
 end
@@ -40,8 +37,6 @@ namespace :bundle do
 end
 
 after 'deploy:setup', 'deploy:create_shared_dir'
-
-# after 'deploy:update', 'deploy:symlink_static'
 
 after "deploy:restart", "deploy:cleanup"
 
