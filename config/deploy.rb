@@ -18,6 +18,14 @@ set :default_environment, {
 }
 
 namespace :deploy do
+  desc "Symlink static dir."
+  task :symlink_static do
+    run "ln -nfs #{shared_path}/assets/img #{release_path}/public/img"
+    run "ln -nfs #{shared_path}/assets/galleria #{release_path}/public/galleria"
+    run "ln -nfs #{shared_path}/assets/news #{release_path}/public/news"
+    run "ln -nfs #{shared_path}/assets/tiny_mce #{release_path}/public/tiny_mce"
+  end
+
   desc "Create shared directories."
   task :create_shared_dir do
     run "mkdir -p #{shared_path}/assets/img #{shared_path}/assets/galleria

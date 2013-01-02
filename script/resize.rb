@@ -1,9 +1,11 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 thumbs_d = "thumbs"
 display_d = "display"
 
-d_list = Dir.glob( File.join("..", "..", "..", "shared", "assets", "galleria", "201*") )
+base_d = "/var/www/cubeba"
+
+d_list = Dir.glob( File.join(base_d,"public","galleria","201*") )
 
 d_list.each do |dir|
   if !File.directory?(File.join(dir,thumbs_d)) && !File.directory?(File.join(dir,display_d))

@@ -110,8 +110,8 @@ post '/admin' do
     "Non hai inserito il titolo (o data) della news! <br> <a href='/admin'>Torna alle news</a>"
   else
     body c
-    Dir.mkdir(File.join("..", "..", "..", "shared", "news", t)) if !File.directory?(File.join("..", "..", "..", "shared", "news", t))
-    File.open(File.join("..", "..", "..", "shared", "news", t, "text.html"), "w") { |f| f.write c }
+    Dir.mkdir(File.join("public", "news", t)) if !File.directory?(File.join("public", "news", t))
+    File.open(File.join("public", "news", t, "text.html"), "w") { |f| f.write c }
     "Testo news creato. Ricordati di caricare il flyer (nome file: flyer.jpg, dimensione: 150 x 210 px) via ftp nella cartella 'news/" + t + "' <br> <a href='/admin'>Torna alle news</a>"
   end
 end
