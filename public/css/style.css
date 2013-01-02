@@ -104,7 +104,7 @@ p#top_menu_last{
 
 #central_top_inner.brown{
   background-color:#E5E2B7;
-  /*background-image: url("img/ribbon.png");
+  /*background-image: url("../img/ribbon.png");
   background-position: 0 47%;
   background-repeat: no-repeat;*/
   color:#6D4627;
@@ -163,15 +163,15 @@ p#top_menu_last{
 }
 
 #cubeba.brown{
-  background:url(img/cubeba_home.png);
+  background:url(../img/cubeba_home.png);
 }
 
 #cubeba.black{
-  background:url(img/cubeba_dance.png);
+  background:url(../img/cubeba_dance.png);
 }
 
 #cubeba.green{
-  background:url(img/cubeba_drink.png);
+  background:url(../img/cubeba_drink.png);
 }
 
 #cubeba span{
@@ -192,22 +192,22 @@ span#dance_box{
 }
 
 span:hover#food_box.cubeba_box_hover{
-  background:url(img/food_home.png);
+  background:url(../img/food_home.png);
   background-repeat:no-repeat;
 }
 
 span#food_box.cubeba_box_fixed{
-  background:url(img/food_home.png);
+  background:url(../img/food_home.png);
   background-repeat:no-repeat;
 }
 
 span:hover#drink_box.cubeba_box_hover{
-  background:url(img/drink_home.png);
+  background:url(../img/drink_home.png);
   background-repeat:no-repeat;
 }
 
 span:hover#dance_box.cubeba_box_hover{
-  background:url(img/dance_home.png);
+  background:url(../img/dance_home.png);
   background-repeat:no-repeat;
 }
 
@@ -216,7 +216,7 @@ span:hover#dance_box.cubeba_box_hover{
 }
 
 #addr{
-  background:url(img/ind.png);
+  background:url(../img/ind.png);
   background-repeat:no-repeat;
   float:right;
   width:243px;
@@ -296,23 +296,23 @@ p#first{
 }
 
 .food #header{
-  background:url(img/food_header.jpg);
+  background:url(../img/food_header.jpg);
 }
 
 .drink #header{
-  background:url(img/drink_header.jpg);
+  background:url(../img/drink_header.jpg);
 }
 
 .dance #header{
-  background:url(img/dance_header.jpg);
+  background:url(../img/dance_header.jpg);
 }
 
 .who #header{
-  background:url(img/who_header.jpg);
+  background:url(../img/who_header.jpg);
 }
 
 #ragg{
-  background:url(img/come_raggiungerci.png);
+  background:url(../img/come_raggiungerci.png);
   background-repeat:no-repeat;
   width:169px;
   height:19px;
@@ -326,7 +326,7 @@ p#first{
 }
 
 .news_img{
-/*   background:url(img/pool.jpg); */
+/*   background:url(../img/pool.jpg); */
 /*   background-repeat:no-repeat; */
   width:150px;
   height:210px;
@@ -353,21 +353,21 @@ p#first{
 }
 
 #arrow_left{
-  background:url(img/arrow_left.png);
+  background:url(../img/arrow_left.png);
   left:30px;
 }
 
 #arrow_left:hover{
-  background:url(img/arrow_left_hover.png);
+  background:url(../img/arrow_left_hover.png);
 }
 
 #arrow_right{
-  background:url(img/arrow_right.png);
+  background:url(../img/arrow_right.png);
   right:30px;
 }
 
 #arrow_right:hover{
-  background:url(img/arrow_right_hover.png);
+  background:url(../img/arrow_right_hover.png);
 }
 
 .news_title{

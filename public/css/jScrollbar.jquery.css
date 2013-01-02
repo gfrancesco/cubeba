@@ -26,14 +26,14 @@
 	width:13px;
 	height:230px;
 	overflow:hidden;
-	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	background:transparent url('../img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
 	margin-left:9px;
 	position:absolute;
 	right:10px;
 }
 .jScrollbar_news .jScrollbar_draggable a.draggable {
 	position:relative;
-	background:transparent url('img/bg_draggable4.png') no-repeat;
+	background:transparent url('../img/bg_draggable4.png') no-repeat;
 	display:block;
 	height:13px;
 	width:13px;
@@ -62,14 +62,14 @@
 	width:13px;
 	height:120px;
 	overflow:hidden;
-	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	background:transparent url('../img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
 	margin-left:9px;
 	position:absolute;
 	right:10px;
 }
 .jScrollbar_left .jScrollbar_draggable a.draggable {
 	position:relative;
-	background:transparent url('img/bg_draggable4.png') no-repeat;
+	background:transparent url('../img/bg_draggable4.png') no-repeat;
 	display:block;
 	height:13px;
 	width:13px;
@@ -109,14 +109,14 @@
 	width:13px;
 	height:228px;
 	overflow:hidden;
-	background:transparent url('img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
+	background:transparent url('../img/bg_jScrollbar_draggable.jpg') repeat-y center top;		
 	margin-left:9px;
 	position:absolute;
 	right:10px;
 }
 .jScrollbar_gallery .jScrollbar_draggable a.draggable {
 	position:relative;
-	background:transparent url('img/bg_draggable4.png') no-repeat;
+	background:transparent url('../img/bg_draggable4.png') no-repeat;
 	display:block;
 	height:13px;
 	width:13px;

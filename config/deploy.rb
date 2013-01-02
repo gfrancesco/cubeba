@@ -31,6 +31,7 @@ namespace :deploy do
     run "mkdir -p #{shared_path}/assets/img #{shared_path}/assets/galleria
       #{shared_path}/assets/news #{shared_path}/assets/tiny_mce 
       #{shared_path}/sockets"
+    run "chmod -R g+w #{shared_path}/assets"
   end
 
 end
@@ -45,6 +46,8 @@ namespace :bundle do
 end
 
 after 'deploy:setup', 'deploy:create_shared_dir'
+
+after 'deploy:update', 'deploy:symlink_static'
 
 after "deploy:restart", "deploy:cleanup"
 
